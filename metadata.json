@@ -1,0 +1,6 @@
+{
+  "name": "ChessVerse — Master Your Game",
+  "description": "A complete, modern chess platform featuring a multi-depth AI engine, local two-player mode, interactive practice laboratory, chess clocks, and customizable tournament boards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
