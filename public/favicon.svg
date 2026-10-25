@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Deep Emerald Green Rounded Square Background with Gold Rim -->
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="#0F3D30" stroke="#D4AF37" stroke-width="2.5" />
+  <rect x="5" y="5" width="54" height="54" rx="11" fill="#145341" opacity="0.55" />
+
+  <!-- Gold Summit Cross -->
+  <path d="M32 9V19M27 14H37" stroke="#D4AF37" stroke-width="3.8" stroke-linecap="round" />
+
+  <!-- Minimal Ivory Chess King Crown Silhouette (Optimized for 16x16 & 32x32 legibility) -->
+  <path
+    d="M16 44C14 35 13 27 19 23C23 20.5 27.5 23 32 28C36.5 23 41 20.5 45 23C51 27 50 35 48 44H16Z"
+    fill="#F4F2ED"
+    stroke="#0B1F18"
+    stroke-width="2"
+    stroke-linejoin="round"
+  />
+
+  <!-- Central Crown Spire & Jewel -->
+  <path
+    d="M27 29C27 23.5 29.2 19.5 32 19.5C34.8 19.5 37 23.5 37 29"
+    fill="#F4F2ED"
+    stroke="#0B1F18"
+    stroke-width="2"
+    stroke-linecap="round"
+  />
+  <circle cx="32" cy="34" r="2.6" fill="#D4AF37" />
+
+  <!-- Gold & Ivory Pedestal Base -->
+  <rect x="15" y="44" width="34" height="4.5" rx="2" fill="#D4AF37" stroke="#0B1F18" stroke-width="1.5" />
+  <rect x="12.5" y="49.5" width="39" height="5.5" rx="2.5" fill="#F4F2ED" stroke="#0B1F18" stroke-width="1.8" />
+</svg>

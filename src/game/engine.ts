@@ -18,7 +18,7 @@ export const TIME_CONTROLS: Record<TimeControl, TimeControlConfig> = {
   bullet: { id: 'bullet', label: 'Bullet', description: '1 min', seconds: 60 },
   blitz: { id: 'blitz', label: 'Blitz', description: '5 min', seconds: 300 },
   rapid: { id: 'rapid', label: 'Rapid', description: '10 min', seconds: 600 },
-  unlimited: { id: 'unlimited', label: 'No Timer', description: 'Untimed', seconds: 0 },
+  unlimited: { id: 'unlimited', label: 'Unlimited', description: 'No clock', seconds: 0 },
 };
 
 export const PIECE_VALUES: Record<PieceSymbol, number> = {

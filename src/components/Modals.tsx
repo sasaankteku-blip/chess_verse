@@ -305,30 +305,30 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-3 sm:p-4"
       role="dialog"
       aria-modal="true"
       aria-label="Game Over Result"
     >
-      <div className="w-full max-w-md rounded-2xl border border-slate-800 bg-[#121A2A] p-6 text-center text-[#F4F2ED] shadow-2xl">
-        <div className="mx-auto mb-3 flex h-14 w-14 items-center justify-center rounded-2xl border border-amber-400/40 bg-amber-500/10 text-amber-400">
+      <div className="w-full max-w-md max-h-[94vh] overflow-y-auto rounded-2xl border border-slate-800 bg-[#121A2A] p-4 sm:p-6 text-center text-[#F4F2ED] shadow-2xl chess-scroll">
+        <div className="mx-auto mb-2 sm:mb-3 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-2xl border border-amber-400/40 bg-amber-500/10 text-amber-400">
           {details.winner === 'draw' ? (
-            <Handshake className="h-7 w-7" />
+            <Handshake className="h-6 w-6 sm:h-7 sm:w-7" />
           ) : (
-            <Trophy className="h-7 w-7" />
+            <Trophy className="h-6 w-6 sm:h-7 sm:w-7" />
           )}
         </div>
 
-        <h2 className="font-display text-3xl font-bold text-white">
+        <h2 className="font-display text-2xl sm:text-3xl font-bold text-white">
           {details.title}
         </h2>
-        <p className="mt-1 text-sm text-emerald-400 font-medium">
+        <p className="mt-1 text-xs sm:text-sm text-emerald-400 font-medium">
           {details.subtitle}
         </p>
         <p className="mt-1 text-xs text-slate-400">{details.reason}</p>
 
         {/* 3 Tabular-Nums Stat Tiles */}
-        <div className="mt-5 grid grid-cols-3 gap-2.5 rounded-xl border border-slate-800 bg-[#0D1320] p-3">
+        <div className="mt-4 sm:mt-5 grid grid-cols-3 gap-2 rounded-xl border border-slate-800 bg-[#0D1320] p-2.5 sm:p-3">
           <div>
             <div className="text-[10px] uppercase tracking-wider text-slate-400">
               Outcome
@@ -359,12 +359,12 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col gap-2.5 sm:flex-row">
+        <div className="mt-4 sm:mt-6 flex flex-row gap-2.5">
           <button
             type="button"
             data-start="true"
             onClick={onPlayAgain}
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-emerald-600 px-4 py-3 text-xs font-bold text-white hover:bg-emerald-500 transition-colors cursor-pointer"
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-emerald-600 px-3 py-2.5 sm:px-4 sm:py-3 text-xs font-bold text-white hover:bg-emerald-500 transition-colors cursor-pointer whitespace-nowrap"
           >
             <RotateCcw className="h-4 w-4" />
             <span>Play Again</span>
@@ -372,7 +372,7 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
           <button
             type="button"
             onClick={onReturnHome}
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-800/80 px-4 py-3 text-xs font-semibold text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer"
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-700 bg-slate-800/80 px-3 py-2.5 sm:px-4 sm:py-3 text-xs font-semibold text-slate-200 hover:bg-slate-800 transition-colors cursor-pointer whitespace-nowrap"
           >
             <Home className="h-4 w-4" />
             <span>Main Menu</span>
@@ -382,7 +382,7 @@ export const GameOverModal: React.FC<GameOverModalProps> = ({
         <button
           type="button"
           onClick={onDismiss}
-          className="mt-3 text-xs text-slate-400 hover:text-slate-200 underline underline-offset-4"
+          className="mt-2.5 sm:mt-3 text-xs text-slate-400 hover:text-slate-200 underline underline-offset-4 cursor-pointer"
         >
           Inspect Final Board
         </button>
@@ -414,12 +414,12 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-4"
+      className="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-3 sm:p-4"
       role="dialog"
       aria-modal="true"
       aria-label={title}
     >
-      <div className="w-full max-w-sm rounded-2xl border border-slate-800 bg-[#121A2A] p-6 text-[#F4F2ED] shadow-2xl">
+      <div className="w-full max-w-sm max-h-[94vh] overflow-y-auto rounded-2xl border border-slate-800 bg-[#121A2A] p-5 sm:p-6 text-[#F4F2ED] shadow-2xl">
         <div className="flex items-center gap-3">
           <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-500/15 text-amber-400">
             <AlertTriangle className="h-5 w-5" />
@@ -432,18 +432,18 @@ export const ConfirmModal: React.FC<ConfirmModalProps> = ({
           </div>
         </div>
 
-        <div className="mt-6 flex items-center justify-end gap-2.5">
+        <div className="mt-5 sm:mt-6 flex items-center justify-end gap-2.5">
           <button
             type="button"
             onClick={onCancel}
-            className="rounded-lg border border-slate-700 bg-slate-800/80 px-4 py-2 text-xs font-semibold text-slate-200 hover:bg-slate-800"
+            className="rounded-lg border border-slate-700 bg-slate-800/80 px-4 py-2 text-xs font-semibold text-slate-200 hover:bg-slate-800 cursor-pointer"
           >
             Cancel
           </button>
           <button
             type="button"
             onClick={onConfirm}
-            className={`rounded-lg px-4 py-2 text-xs font-bold text-white ${
+            className={`rounded-lg px-4 py-2 text-xs font-bold text-white cursor-pointer ${
               confirmVariant === 'danger'
                 ? 'bg-rose-600 hover:bg-rose-500'
                 : 'bg-emerald-600 hover:bg-emerald-500'
